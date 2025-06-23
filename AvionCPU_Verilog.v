@@ -198,20 +198,20 @@ always@(*) begin
             
             2: begin
                 if(IR[9:6] < 6) begin
-					MAR = IR[5:0];
-					stateNext = 3;
-				end else if(IR[9:6] == 6) begin
-					stateNext = 0;
-					PCNext = IR[5:0];
-				end else if(IR[9:6] == 7) begin
-					stateNext = 0;
-					if(ACC == 0)
-						PCNext = IR[5:0];
-				end else if(IR[9:6] == 8) begin
-						stateNext = 0;
-				end else if (IR[9:6] == 9) begin
-						stateNext = 4;
-				end
+			MAR = IR[5:0];
+			stateNext = 3;
+		end else if(IR[9:6] == 6) begin
+			stateNext = 0;
+			PCNext = IR[5:0];
+		end else if(IR[9:6] == 7) begin
+			stateNext = 0;
+			if(ACC == 0)
+				PCNext = IR[5:0];
+			end else if(IR[9:6] == 8) begin
+				stateNext = 0;
+			end else if (IR[9:6] == 9) begin
+				stateNext = 4;
+			end
 				
             end
             
