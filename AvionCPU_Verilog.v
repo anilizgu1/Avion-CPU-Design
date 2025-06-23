@@ -203,7 +203,7 @@ always@(*) begin
 				end else if(IR[9:6] == 6) begin
 					stateNext = 0;
 					PCNext = IR[5:0];
-				end else if(IR[9:6] = 7) begin
+				end else if(IR[9:6] == 7) begin
 					stateNext = 0;
 					if(ACC == 0)
 						PCNext = IR[5:0];
